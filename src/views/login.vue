@@ -1,11 +1,8 @@
 
 <template>
   <div class="main-bg">
-
     <!-- title -->
     <h1>The login</h1>
-    <div  class="divdiv">   <router-link class="rolink" type="warning" to="/top">返回首页</router-link></div>
-           
     <!-- //title -->
     <div class="sub-main-w3">
       <div class="image-style"></div>
@@ -16,7 +13,6 @@
           <label for="option1" class="icon-left-w3pvt">
             <span class="fa fa-user-circle" aria-hidden="true"></span>登陆
           </label>
-          
           <article>
             <el-form action="#" method="post">
               <h3 class="legend">Login Here</h3>
@@ -106,13 +102,10 @@
                   required
                 />
               </div>
-<<<<<<< HEAD
               <div class="input">
                 <span class="fa fa-key" aria-hidden="true"></span>
                 <input type="password" placeholder="请再次输入密码" name="password" required />
               </div>
-=======
->>>>>>> 4612c5b88b874942a0c410fb13818845a603013c
               <div class="input" style="width:135px;height:20px">
                 <span class="fa fa-book mark" aria-hidden="true"></span>
                 <input placeholder="请输入图形验证码" name="dfddf" required v-model="txyz" />
@@ -206,21 +199,6 @@ export default {
   },
 };
 </script>
-<style scoped>
-.rolink{
-font-size:20px;
-color: aliceblue;
-}
-.divdiv{
-  margin-left: 927px;
-
-margin-top: -53px;
-}
-.main-bg{
-  margin-top: -60px
-}
-    
-</style>
 
 <style>
 </style>
