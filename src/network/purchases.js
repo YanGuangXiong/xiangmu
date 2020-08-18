@@ -1,15 +1,18 @@
 import ajaxRequest from './ajaxRequest'
 
 
-// 查询
-export function GetpurcharesList(pagindex, limit) {
+
+
+//注册
+export function getzc(stuff) {
+    console.log(stuff);
     return ajaxRequest({
-        method: 'get',
-        url: `api/purchase/GetpurchaseList`,
-        params: {
-            pagindex: pagindex,
-            limit: limit
-        }
+        method: 'post',
+        url: `api/WebLogin/LoginZC`,
+        data:JSON.stringify(stuff)
     })
 }
+
+
+
 
