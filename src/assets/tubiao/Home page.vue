@@ -10,7 +10,7 @@
      <el-col :span="6">
           <el-row :gutter="22">
             <el-col :span="10" class="tupian">
-              <img src="../assets/tubiao/tubiao/tubiao (3).jpg" />
+              <img src="../assets/tubiao/tubiao (3).jpg" />
             </el-col>
             <el-col :span="12" class="ddf">
               <p class="pbiaoqian">银行存管</p>
@@ -22,7 +22,7 @@
        <el-col :span="6">
           <el-row :gutter="22">
             <el-col :span="10" class="tupian">
-              <img src="../assets/tubiao/tubiao/tubiao (1).jpg" />
+              <img src="../assets/tubiao/tubiao (1).jpg" />
             </el-col>
             <el-col :span="12" class="ddf">
               <p class="pbiaoqian">灵活操作</p>
@@ -34,7 +34,7 @@
         <el-col :span="6">
           <el-row :gutter="22">
             <el-col :span="10" class="tupian">
-              <img src="../assets/tubiao/tubiao/tubiao (2).jpg" />
+              <img src="../assets/tubiao/tubiao (2).jpg" />
             </el-col>
             <el-col :span="12" class="ddf">
               <p class="pbiaoqian">安全保障</p>
@@ -46,7 +46,7 @@
        <el-col :span="6">
           <el-row :gutter="22">
             <el-col :span="10" class="tupian">
-              <img src="../assets/tubiao/tubiao/tubiao (3).jpg" />
+              <img src="../assets/tubiao/tubiao (3).jpg" />
             </el-col>
             <el-col :span="12" class="ddf">
               <p class="pbiaoqian">严格审核</p>
@@ -79,7 +79,7 @@
         >
           <p style=" padding-top:30px">金控保 [JIB15615123433]</p>
           <div style="  padding-top:40px">
-            <el-progress type="circle" :percentage="30" :width="130"></el-progress>
+            <el-progress type="circle" :percentage="30"></el-progress>
 
             <el-row :gutter="30">
               <el-col :span="12">
@@ -154,7 +154,7 @@
       </div>
     </div>
 
-      <div>
+    <div>
       <i class="el-icon-minus" style="font-size:50px">
             <p style="font-size:30px">合作机构</p>
                     <br>
@@ -172,7 +172,7 @@
     <br>
     <p>Copyright(c) 2018 by Liuzhou Financial Holding Technology Co .Ltd.All rights reserved</p>
     <br>
-      <img src="../assets/tubiao/tubiao/gongan.jpg" style="width:20px" > &nbsp;
+      <img src="../assets/tubiao/gongan.jpg" style="width:20px" > &nbsp;
       <span>桂公网安备45020202000273号 </span>&nbsp;&nbsp;&nbsp;
        
       <span class="dfdf">桂ICP备18003600号-1</span>
@@ -192,7 +192,8 @@
 export default {
   data() {
     return {
-           imgLists: [
+
+       imgLists: [
        
         {
           url: require("../assets/tubiao/hezuo (1).jpg"),
@@ -207,6 +208,7 @@ export default {
           url: require("../assets/tubiao/hezuo (4).jpg"),
         },
       ],
+
       imgList: [
         {
           url: require("../assets/lunbo1img/jdkjfdkj (1).jpg"),

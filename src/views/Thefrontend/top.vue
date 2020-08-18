@@ -6,8 +6,9 @@
       </el-col>
       <el-col :span="20">
         <div class="grid-content bg-purple">
-          <a href>登录</a>
-          <a class="a2">注册</a>
+                 <router-link type="warning" to="/login">登录</router-link>
+         
+          <router-link type="warning" to="/login">注册</router-link>
         </div>
       </el-col>
     </el-row>
@@ -17,6 +18,7 @@
           <img src="../../assets/lunbo1img/56545.jpg" class="image1" />
         </el-col>
         <el-col :span="25">
+             <!-- :default-active="this.$router.path" -->
           <el-menu
             :default-active="this.$router.path"
             router
