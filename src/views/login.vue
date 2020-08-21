@@ -4,7 +4,7 @@
 
     <!-- title -->
     <h1>The login</h1>
-    <div  class="divdiv">   <router-link class="rolink" type="warning" to="/top">返回首页</router-link></div>
+    <div  class="divdiv">   <router-link class="rolink" type="warning" to="/Home page">返回首页</router-link></div>
            
     <!-- //title -->
     <div class="sub-main-w3">

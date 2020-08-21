@@ -13,15 +13,15 @@
              <p style="margin-left: -206px">最高可借20万</p>
             </el-form-item>
           
-                <el-radio v-model="rado" :label="0">
-                  我已阅读并同意
+              <el-checkbox v-model="checked">我已阅读并同意
+                  
                   <el-link href="#" class="fwxy" type="info" :underline="false">《用户服务协议》</el-link>
-                  及
+               <span>及</span>
                   <el-link href="#" class="fwxy" type="info" :underline="false">个人信息采集授权条款</el-link>
-                </el-radio>
+            </el-checkbox>
 <br>
 <br>
-<br>
+<br> 
                <el-button type="danger" style="width:400px" round>立即申请</el-button>
           </el-form>
         </div>
@@ -33,7 +33,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+   
+    };
   },
 };
 </script>

@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 const routes = [
   { 
         path: '', 
-        redirect: '/top'
+        redirect: '/Home page'
        },
        
        {
@@ -38,7 +38,7 @@ const routes = [
             },
             {
               path: '/investment',
-              component: () => import('../views/Thefrontend/investment.vue')
+              component: () => import('../views/Thefrontend/cheshi.vue')
           
             },
             {

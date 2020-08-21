@@ -1,7 +1,7 @@
 <template>
   <div class="htm">
     <div class="qwe">
-      <el-tabs :tab-position="tabPosition" type="card" style="height: 2000px;">
+      <el-tabs :tab-position="tabPosition" type="card" style="height: 2000px;" v-model="activeName" >
         <el-tab-pane class="e"  label="备案信息">
           <div class="wsx">nethhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</div>
         </el-tab-pane>
@@ -12,7 +12,7 @@
         <el-tab-pane label="组织信息">
           <div class="wsx">角色222222222222222222222222管理</div>
         </el-tab-pane>
-        <el-tab-pane label="经营信息">
+        <el-tab-pane label="经营信息" name="jinying">
           <el-form :model="fromBusiness">
             <div class="wsx">
               <div style=" background-color: red; float:left"></div>
@@ -181,6 +181,7 @@
 export default {
   data() {
     return {
+      activeName:"jinying",
       tabPosition: "left",
 
       fromBusiness: {
