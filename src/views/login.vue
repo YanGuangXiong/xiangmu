@@ -66,7 +66,7 @@
               <div class="input" style="width:135px;height:20px">
                 <span class="fa fa-book mark" aria-hidden="true"></span>
                 <input placeholder="请输入图形验证码" v-model="txyz" name="yanzhengma" required />
-                <div @click="refreshCode" style="position:absolute;left: 210px ">
+                <div @ ="refreshCode" style="position:absolute;left: 210px ">
                   <s-identify :identifyCode="identifyCode" id="a2"></s-identify>
                 </div>
               </div>
@@ -186,7 +186,7 @@ export default {
     async long2() {
       if (this.identifyCode1 != this.txyz) {
         this.refreshCode();
-        return this.$message.error("验证码错误！");
+        return this.$message.error("验证码错误！"); 
       }
       this.userInfo.Status = 1;
       var obj = {
@@ -194,7 +194,6 @@ export default {
         userInfo: this.userInfo,
       };
       const { data: res } = await getzc(obj);
-      
     },
   },
 };
