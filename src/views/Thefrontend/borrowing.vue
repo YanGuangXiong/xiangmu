@@ -8,7 +8,8 @@
             <p style="font-size:30px">请填写借款信息</p>
             <el-form-item >
                 <span style="margin-left: -85px">借款金额：</span>
-              <el-input style="width:300px;margin-top: 42px"></el-input>
+          
+              <input type="text" style="width:300px;margin-top: 42px;height:30px"  />
               <span>元</span>
              <p style="margin-left: -206px">最高可借20万</p>
             </el-form-item>
@@ -17,7 +18,7 @@
                   
                   <el-link href="#" class="fwxy" type="info" :underline="false">《用户服务协议》</el-link>
                <span>及</span>
-                  <el-link href="#" class="fwxy" type="info" :underline="false">个人信息采集授权条款</el-link>
+                  <el-link href="#" class="fwxy" type="info" :underline="false">《个人信息采集授权条款》</el-link>
             </el-checkbox>
 <br>
 <br>
@@ -50,7 +51,7 @@ export default {
   width: 1182px;
   margin-top: 94px;
   position: absolute;
-  margin-left: 145px;
+  margin-left: 145px; 
   background: rgb(252, 250, 250);
 }
 .divfu {

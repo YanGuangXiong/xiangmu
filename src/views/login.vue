@@ -106,13 +106,10 @@
                   required
                 />
               </div>
-<<<<<<< HEAD
               <div class="input">
                 <span class="fa fa-key" aria-hidden="true"></span>
                 <input type="password" placeholder="请再次输入密码" name="password" required />
               </div>
-=======
->>>>>>> 4612c5b88b874942a0c410fb13818845a603013c
               <div class="input" style="width:135px;height:20px">
                 <span class="fa fa-book mark" aria-hidden="true"></span>
                 <input placeholder="请输入图形验证码" name="dfddf" required v-model="txyz" />
@@ -189,6 +186,8 @@ export default {
         userInfo: this.userInfo,
       };
       const { data: res } = await getzc(obj);
+    console.log(1);
+      console.log(res);
     },
     async long2() {
       if (this.identifyCode1 != this.txyz) {
