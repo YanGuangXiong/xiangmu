@@ -1,10 +1,11 @@
 <template>
   <div>
-    <el-carousel indicator-position="outside" class="lunbo1">
-      <el-carousel-item v-for="(img,index) in imgList" :key="index">
-        <img :src="img.url" width="100%" height="100%" />
+    <el-carousel indicator-position="outside" class="lunbo1" style="height:350px">
+      <el-carousel-item v-for="(img,index) in imgList" :key="index" style="height:350px" >
+        <img :src="img.url" width="100%" style="height:350px"  />
       </el-carousel-item>
     </el-carousel>
+    <br>
     <div class="bdsf">
       <el-row :gutter="30">
      <el-col :span="6">
@@ -168,7 +169,7 @@
     <div class="divdibu">
       <div class="divnei">关于我们 公司简介 管理团队 联系我们 | 安全保障 备案信息 审核报告 风险管理 | 帮助中心 投资指引 借款指引 常见问题</div>
     <br>
-    <p>版权所有@柳州是市金控科技有限公司</p>
+    <p>版权所有@柳州市金控科技有限公司</p>
     <br>
     <p>Copyright(c) 2018 by Liuzhou Financial Holding Technology Co .Ltd.All rights reserved</p>
     <br>
@@ -271,7 +272,7 @@ export default {
   margin-left: 200px;
 }
 .div12 {
-
+  background: #eee;
   width: 100%;
   height: 261px;
 }
@@ -329,7 +330,7 @@ p {
   margin-right: 30px;
 }
 .lunbo1 {
-  background: white;
+  background: #eee;
 }
 .img6 {
   width: 100%;
@@ -348,7 +349,7 @@ background-size:100% 100%;
 }
 
 .subject-matchheight-inherit {
-  background: white;
+  background: #eee;
 }
 
 .el-carousel__item h3 {
@@ -364,9 +365,11 @@ background-size:100% 100%;
 }
 
 .divdibu {
-  background: black;
+  background: #333333;
+    color: #eee;
 }
 .divnei {
   align-content: center;
+
 }
 </style>

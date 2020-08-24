@@ -3,6 +3,11 @@
   <div class="main-bg">
     <!-- title -->
     <h1>The login</h1>
+<<<<<<< HEAD
+=======
+    <div  class="divdiv">   <router-link class="rolink" type="warning" to="/Home page">返回首页</router-link></div>
+           
+>>>>>>> 5c72de203eb97650cc8a6f8aef87be621d67294e
     <!-- //title -->
     <div class="sub-main-w3">
       <div class="image-style"></div>
