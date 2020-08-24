@@ -1,11 +1,13 @@
 
 <template>
   <div class="main-bg">
-
     <!-- title -->
     <h1>The login</h1>
+<<<<<<< HEAD
+=======
     <div  class="divdiv">   <router-link class="rolink" type="warning" to="/Home page">返回首页</router-link></div>
            
+>>>>>>> 5c72de203eb97650cc8a6f8aef87be621d67294e
     <!-- //title -->
     <div class="sub-main-w3">
       <div class="image-style"></div>
@@ -16,7 +18,6 @@
           <label for="option1" class="icon-left-w3pvt">
             <span class="fa fa-user-circle" aria-hidden="true"></span>登陆
           </label>
-          
           <article>
             <el-form action="#" method="post">
               <h3 class="legend">Login Here</h3>
@@ -70,7 +71,7 @@
               <div class="input" style="width:135px;height:20px">
                 <span class="fa fa-book mark" aria-hidden="true"></span>
                 <input placeholder="请输入图形验证码" v-model="txyz" name="yanzhengma" required />
-                <div @click="refreshCode" style="position:absolute;left: 210px ">
+                <div @ ="refreshCode" style="position:absolute;left: 210px ">
                   <s-identify :identifyCode="identifyCode" id="a2"></s-identify>
                 </div>
               </div>
@@ -192,7 +193,7 @@ export default {
     async long2() {
       if (this.identifyCode1 != this.txyz) {
         this.refreshCode();
-        return this.$message.error("验证码错误！");
+        return this.$message.error("验证码错误！"); 
       }
       this.userInfo.Status = 1;
       var obj = {
@@ -200,26 +201,10 @@ export default {
         userInfo: this.userInfo,
       };
       const { data: res } = await getzc(obj);
-      
     },
   },
 };
 </script>
-<style scoped>
-.rolink{
-font-size:20px;
-color: aliceblue;
-}
-.divdiv{
-  margin-left: 927px;
-
-margin-top: -53px;
-}
-.main-bg{
-  margin-top: -60px
-}
-    
-</style>
 
 <style>
 </style>
