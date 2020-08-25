@@ -1,13 +1,11 @@
 
 <template>
   <div class="main-bg">
+
     <!-- title -->
     <h1>The login</h1>
-<<<<<<< HEAD
-=======
     <div  class="divdiv">   <router-link class="rolink" type="warning" to="/Home page">返回首页</router-link></div>
            
->>>>>>> 5c72de203eb97650cc8a6f8aef87be621d67294e
     <!-- //title -->
     <div class="sub-main-w3">
       <div class="image-style"></div>
@@ -16,18 +14,19 @@
         <div id="section1" class="section-w3ls">
           <input type="radio" name="sections" id="option1" checked />
           <label for="option1" class="icon-left-w3pvt">
-            <span class="fa fa-user-circle" aria-hidden="true"></span>登陆
+            <span class="fa fa-user-circle" aria-hidden="true" @click="denglubutton" ></span>登陆
           </label>
+          
           <article>
-            <el-form action="#" method="post">
+            <el-form action="#" method="post" ref="ruleForm" :rules="rules" :model="formUser" >
               <h3 class="legend">Login Here</h3>
               <div class="input">
                 <span class="fa fa-phone" aria-hidden="t,i9ue"></span>
-                <input type="text" placeholder="Phone" name="Phone" required />
+                <el-input type="text" placeholder="Phone" name="Phone" required  v-model="formUser.phone"> </el-input>
               </div>
               <div class="input">
                 <span class="fa fa-key" aria-hidden="true"></span>
-                <input type="password" placeholder="Password" name="password" required />
+                <el-input type="password" placeholder="Password" name="password" v-model="formUser.password" required > </el-input>
               </div>
               <button type="submit" class="btn submit">登录</button>
 
@@ -71,11 +70,11 @@
               <div class="input" style="width:135px;height:20px">
                 <span class="fa fa-book mark" aria-hidden="true"></span>
                 <input placeholder="请输入图形验证码" v-model="txyz" name="yanzhengma" required />
-                <div @ ="refreshCode" style="position:absolute;left: 210px ">
+                <div @click="refreshCode" style="position:absolute;left: 210px ">
                   <s-identify :identifyCode="identifyCode" id="a2"></s-identify>
                 </div>
               </div>
-              <button type="submit" class="btn submit" @click="long1">注册</button>
+              <button type="button" class="btn submit" @click="long1">注册</button>
             </el-form>
           </article>
         </div>
@@ -132,10 +131,26 @@
 <script>
 import SIdentify from "../components/indexdf";
 import { getzc } from "../network/purchases";
+import {qiantaidenglu} from "../network/purchases"
 export default {
   components: { "s-identify": SIdentify },
   data() {
     return {
+      rules:{
+          phone:[
+            
+               { required: true, message: "请输入电话号码", trigger: "blur" },
+               { min: 1, max: 11, message: "请输入正确的号码", trigger: "blur" }
+          ],
+          password :[
+             { required: true, message: "请输入密码", trigger: "blur" },
+             { min: 6, max: 13, message: "密码长度为6-13位字符", trigger: "blur" }
+          ]
+      },
+      formUser:{
+        phone:"",
+        password:""
+      },
       logins: {
         LoginName: "",
         LoginPwd: "",
@@ -187,13 +202,11 @@ export default {
         userInfo: this.userInfo,
       };
       const { data: res } = await getzc(obj);
-    console.log(1);
-      console.log(res);
     },
     async long2() {
       if (this.identifyCode1 != this.txyz) {
         this.refreshCode();
-        return this.$message.error("验证码错误！"); 
+        return this.$message.error("验证码错误！");
       }
       this.userInfo.Status = 1;
       var obj = {
@@ -201,10 +214,49 @@ export default {
         userInfo: this.userInfo,
       };
       const { data: res } = await getzc(obj);
+      
     },
+
+      // 登录
+    async  denglubutton(){
+        this.$refs.ruleForm.validate(async valid => {
+        if (!valid) return;
+       
+        // 调用接口验证是否登录成功
+        const { data: res } = await userLogin(this.formUser);
+
+        console.log(res);
+ 
+        if (res.meta.status !== 200) return this.$message("登录失败");
+
+        // 登录成功！
+        this.$message({ message: "登录成功！", type: "success" });
+
+        //将token值存入缓存中
+        window.sessionStorage.setItem("token", res.data.token);
+
+        // // 页面跳转
+        this.$router.replace("/Home page");
+      }
+        )}
   },
 };
 </script>
+<style scoped>
+.rolink{
+font-size:20px;
+color: aliceblue;
+}
+.divdiv{
+  margin-left: 927px;
+
+margin-top: -53px;
+}
+.main-bg{
+  margin-top: -60px
+}
+    
+</style>
 
 <style>
 </style>

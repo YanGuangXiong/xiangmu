@@ -37,7 +37,7 @@ const routes = [
           
             },
             {
-              path: '/investment',
+              path: '/cheshi',
               component: () => import('../views/Thefrontend/cheshi.vue')
           
             },

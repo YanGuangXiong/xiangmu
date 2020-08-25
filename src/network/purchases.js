@@ -13,5 +13,13 @@ export function getzc(stuff) {
 }
 
 
+// 登录
+export function qiantaidenglu(userinfo){
+return ajaxRequest({
+    method:'post',
+    url: `api/WebLogin/getlogin`,
+    data:JSON.stringify(userinfo)
+})
 
+}
 

@@ -73,22 +73,22 @@
           </i>
         </div>
         <el-carousel-item
-          v-for="item in 6"
-          :key="item"
+          v-for="item in dfdsdf"
+          :key="item.id"
           style="width:510px;height:350px "
           class="dfjfnfx"
         >
-          <p style=" padding-top:30px">金控保 [JIB15615123433]</p>
+          <p style=" padding-top:30px">金控报{{item.name}}</p>
           <div style="  padding-top:40px">
-            <el-progress type="circle" :percentage="30" :width="130"></el-progress>
+            <el-progress type="circle" :percentage="item.jindu" :width="130"></el-progress>
 
             <el-row :gutter="30">
               <el-col :span="12">
-                <p style="font-zize:2cp">30天</p>
+                <p style="font-zize:2cp">{{item.tianshu}}</p>
                 <p>期限</p>
               </el-col>
               <el-col :span="12">
-                <p>87,000元</p>
+                <p>{{item.jine}}</p>
                 <p>剩余金额</p>
               </el-col>
             </el-row>
@@ -193,6 +193,10 @@
 export default {
   data() {
     return {
+
+     
+
+      
            imgLists: [
        
         {
@@ -229,7 +233,6 @@ export default {
         { name: "sssssssss", datatiem: "2002-02-02" },
         { name: "sssssssss", datatiem: "2002-02-02" },
       ],
-
       announcementList: [
         { name: "sssssssss", datatiem: "2002-02-02" },
         { name: "sssssssss", datatiem: "2002-02-02" },
@@ -237,6 +240,12 @@ export default {
         { name: "sssssssss", datatiem: "2002-02-02" },
         { name: "sssssssss", datatiem: "2002-02-02" },
       ],
+   dfdsdf:[
+          {name:"JIB15615123433",jindu:"15",tianshu:"360",jine:"1300.00"},
+           {name:"JIB15615123433",jindu:"15",tianshu:"360",jine:"1300.00"},
+            {name:"JIB15615123433",jindu:"15",tianshu:"360",jine:"1300.00"}
+        ]
+
     };
   },
 };

@@ -28,7 +28,7 @@
           >
             <el-menu-item index="/Home page">首页</el-menu-item>
             <el-menu-item index="/disclosure">信息披露</el-menu-item>
-            <el-menu-item index="/investment">我要投资</el-menu-item>
+            <el-menu-item index="/cheshi">我要投资</el-menu-item>
             <el-menu-item index="/borrowing">我要借款</el-menu-item>
             <el-menu-item index="/account">我的账号</el-menu-item>
             <el-menu-item index="/about">关于我们</el-menu-item>
