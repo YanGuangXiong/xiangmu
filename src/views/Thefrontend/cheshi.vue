@@ -82,7 +82,7 @@
           <span style="color: red;">%</span>
           <p style="margin-left:40px">预期年化收益率</p>
           <br />
-<br>
+          <br />
           <span style="margin-left:40px">起息日：</span>
           <span>2018-06-13</span>
         </div>
@@ -120,8 +120,11 @@
 
           <br />
           <br />
-          <span style="margin-left:80px">我已阅读并同意</span>
-          <router-link type="warning" to="/login" style="color:red">《投资协议》</router-link>
+
+          <el-checkbox v-model="checked">
+            我已阅读并同意
+            <router-link type="warning" to="/login" style="color:red">《投资协议》</router-link>
+          </el-checkbox>
           <br />
           <br />
           <el-button
@@ -154,20 +157,18 @@
             <span style="margin-left:20px">汇款方式：</span>
             <span>到期一次性还本付息</span>
             <br />
-            <br>
+            <br />
             <span style="margin-left:20px">见证机构：</span>
             <span>柳投金服</span>
           </span>
         </div>
         <div style=" width:340px">
-  
           <span style="margin-left:38px">投资进度</span>
           <el-progress :percentage="50" stroke-width="10" style="width:240px;float:right"></el-progress>
         </div>
       </div>
     </el-dialog>
-    </div>
-
+  </div>
 </template>
 
 <script>
@@ -215,7 +216,7 @@ export default {
 };
 </script>
 <style scoped>
-.dialog1{
+.dialog1 {
   padding-top: 42px;
 }
 .div-float {

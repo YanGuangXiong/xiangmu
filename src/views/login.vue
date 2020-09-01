@@ -22,7 +22,7 @@
               <h3 class="legend">Login Here</h3>
               <div class="input">
                 <span class="fa fa-phone" aria-hidden="t,i9ue"></span>
-                <el-input type="text" placeholder="Phone" name="Phone" required  v-model="formUser.phone"> </el-input>
+                <el-input style="height:21px" type="text" placeholder="Phone" name="Phone" required  v-model="formUser.phone"> </el-input>
               </div>
               <div class="input">
                 <span class="fa fa-key" aria-hidden="true"></span>
@@ -243,6 +243,9 @@ export default {
 };
 </script>
 <style scoped>
+.el-input__inner{
+  height: 21px;
+}
 .rolink{
 font-size:20px;
 color: aliceblue;
